@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="wq.projects.MainActivity"
+    tools:showIn="@layout/app_bar_main">
+    <!--
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp_main_content_pages"
+            android:layout_width="match_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1">
+        </android.support.v4.view.ViewPager>-->
+
+   <!-- <view.NoScrollViewPager
+        android:id="@+id/vp_main_content_pages"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1" >
+    </view.NoScrollViewPager>-->
+
+    <!--fragment容器-->
+    <FrameLayout
+        android:id="@+id/fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dip"
+        android:layout_weight="1">
+    </FrameLayout>
+    <!--界面下导航按钮-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioGroup
+                android:id="@+id/rg_content_radios"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#000000"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/rb_main_content_one"
+                    style="@style/radioButtonStyle"
+                    android:drawableTop="@drawable/rb_home_selector"
+                    android:text="资讯" />
+
+                <RadioButton
+                    android:id="@+id/rb_main_content_two"
+                    style="@style/radioButtonStyle"
+                    android:drawableTop="@drawable/rb_newscenter_selector"
+                    android:text="头条" />
+
+                <RadioButton
+                    android:id="@+id/rb_main_content_three"
+                    style="@style/radioButtonStyle"
+                    android:drawableTop="@drawable/rb_smartservice_selector"
+                    android:text="天气" />
+
+                <RadioButton
+                    android:id="@+id/rb_main_content_four"
+                    style="@style/radioButtonStyle"
+                    android:drawableTop="@drawable/rb_govaffairs_selector"
+                    android:text="交通" />
+
+                <RadioButton
+                    android:id="@+id/rb_main_content_five"
+                    style="@style/radioButtonStyle"
+                    android:drawableTop="@drawable/rb_settingcenter_selector"
+                    android:text="股票" />
+            </RadioGroup>
+
+        </LinearLayout>
+</LinearLayout>
